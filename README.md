@@ -1,24 +1,11 @@
-# README
+# Suggestotron
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+我的投票系統，照著 [RailsBridge - Intro to Rails](http://docs.railsbridge.org/intro-to-rails/) 這個課程一步步完成的。
 
-Things you may want to cover:
+[View the demo application here](https://suggestotron-c.herokuapp.com/)
 
-* Ruby version
+## 基本功能
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  * 使用者可以檢視主題
+  * 可以對主題投票
+  * 可以建立、編輯和刪除主題
