@@ -12,6 +12,8 @@
     <%= render "common/navbar" %>
 
     <div class="container">
+      <%= content_tag(:div, notice, class: "alert alert-info") if notice %>
+
       <%= yield %>
 
       <%= render "common/footer" %>
