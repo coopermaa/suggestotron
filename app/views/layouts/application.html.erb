@@ -12,8 +12,9 @@
     <%= render "common/navbar" %>
 
     <div class="container">
-      <%= content_tag(:div, notice, class: "alert alert-info") if notice %>
-      <%= content_tag(:div, alert, class: "alert alert-danger") if alert %>
+      <% close_button = content_tag(:a, "x", class: "close", "data-dismiss" => "alert") %>
+      <%= content_tag(:div, close_button + notice, class: "alert alert-info") if notice %>
+      <%= content_tag(:div, close_button + alert, class: "alert alert-danger") if alert %>
 
       <%= yield %>
 
