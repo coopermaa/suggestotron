@@ -2,6 +2,8 @@
 
 <h1>Topics</h1>
 
+<%= link_to 'New Topic', new_topic_path, class: "btn btn-primary pull-right" %>
+
 <table class="table table-stripped table-hover">
   <thead>
     <tr>
@@ -17,13 +19,11 @@
       <tr>
         <td><%= link_to topic.title, topic %></td>
         <td><%= topic.votes.count %></td>
-        <td><%= button_to '+1', upvote_topic_path(topic), method: :post %></td>
-        <td><%= link_to 'Delete', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to '+1', upvote_topic_path(topic), method: :post, class: "btn btn-sm btn-primary" %></td>
+        <td><%= link_to '', topic, method: :delete, data: { confirm: 'Are you sure?' },
+                   class: "btn btn-sm btn-danger glyphicon glyphicon-trash" %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Topic', new_topic_path %>
