@@ -5,7 +5,7 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.paginate(page: params[:page], per_page: 10)
+    @topics = Topic.order("votes_count DESC").paginate(page: params[:page], per_page: 10)
   end
 
   # GET /topics/1
