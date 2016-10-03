@@ -70,7 +70,8 @@ class TopicsController < ApplicationController
 
   def downvote
     @topic = Topic.find(params[:id])
-    @topic.votes.first.destroy if @topic.votes.count > 0
+    @vote = @topic.votes.find_by user_id: current_user.id
+    @vote.destroy if @vote
     redirect_to topics_path
   end
 
