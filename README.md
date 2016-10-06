@@ -22,3 +22,21 @@
   * 使用者登入後才可以發文、投票、刪文...
   * 使用者對每個 topic 只可以投一票
   * 主題列表按照得票數排序
+
+## Installation
+
+* always use this command for bundle during development in local machine:
+
+    `bundle install --without production`
+
+* always use this command for bundle for production environmnet:
+
+    `bundle install --without development test`
+
+* Database creation and initialization:
+
+    `bundle exec rake db:setup db:seed`
+
+* Start the App:
+
+    `rails server`
